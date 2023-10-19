@@ -3,7 +3,6 @@ package ar.com.loyalindra.resources;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -47,13 +46,13 @@ public class ClienteResource {
 	// get: obtener un recurso
 	//http://localhost:8081/miapp/cliente/2
 	@GetMapping(produces = "application/json", path = "/{id}")
-	public ClienteDTO getById(
+	public Cliente getById(
 			@PathVariable("id") Long id
 		) {
 
 		System.out.println("getById");
 		Optional<Cliente> clienteOptional = this.clienteRepositoy.findById(id);
-
+		/*
 		ClienteDTO clienteDto = null;
 		if(clienteOptional.isPresent()) {
 			Cliente cliente = clienteOptional.get();
@@ -62,5 +61,7 @@ public class ClienteResource {
 		}
 		
 		return clienteDto;
+		*/
+		return clienteOptional.get();
 	}
 }
