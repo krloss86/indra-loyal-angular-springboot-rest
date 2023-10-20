@@ -1,44 +1,43 @@
+
 package ar.com.loyalindra.models.dto;
 
-//POJO
 public class ClienteDTO {
 
-	private Long id;
-	private String telefono;
-	private String nombre;
+    private Saldos saldos;
+    private Equipo equipo;
+    private Cliente cliente;
+    private Recomendaciones recomendaciones;
 
-	public ClienteDTO(Long id) {	
-		this.id = id;
-	}
+    public Saldos getSaldos() {
+        return saldos;
+    }
 
-	public ClienteDTO(Long id, String telefono, String nombre) {
-		this.id = id;
-		this.telefono = telefono;
-		this.nombre = nombre;
-	}
+    public void setSaldos(Saldos saldos) {
+        this.saldos = saldos;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Equipo getEquipo() {
+        return equipo;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
 
-	public String getTelefono() {
-		return telefono;
-	}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public Recomendaciones getRecomendaciones() {
+        return recomendaciones;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
+    public void setRecomendaciones(Recomendaciones recomendaciones) {
+        this.recomendaciones = recomendaciones;
+    }
+
 }

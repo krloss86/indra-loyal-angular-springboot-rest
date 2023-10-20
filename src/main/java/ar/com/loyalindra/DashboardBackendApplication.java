@@ -20,6 +20,7 @@ public class DashboardBackendApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/api/cliente/*").allowedOrigins("http://localhost:4200");
+				registry.addMapping("/api/auth/*").allowedOrigins("http://localhost:4200");
 			}
 		};
 	}

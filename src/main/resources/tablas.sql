@@ -133,3 +133,29 @@ INSERT INTO cliente_saldos (cliente_id, saldo_id) VALUES
 	(1, 3),
 	(1, 4),
 	(1, 5);
+
+CREATE TABLE user (
+	id INT NOT NULL AUTO_INCREMENT,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	PRIMARY KEY (id),
+	UNIQUE INDEX username (username)
+);
+
+CREATE TABLE role (
+	id INT NOT NULL AUTO_INCREMENT,
+	rol varchar(50) NOT NULL,
+	PRIMARY KEY (id),
+	UNIQUE INDEX rol (rol)
+);
+
+CREATE TABLE users_roles (
+	user_id INT NOT NULL,
+	role_id INT NOT NULL,
+	PRIMARY KEY (user_id, role_id),
+	CONSTRAINT FK_users_roles_user FOREIGN KEY (user_id) REFERENCES user (id),
+	CONSTRAINT FK_users_roles_role FOREIGN KEY (role_id) REFERENCES role (id)
+);
+
+ALTER TABLE user CHANGE COLUMN password password VARCHAR(100) NOT NULL AFTER username;
+UPDATE user SET password='$2y$10$l6fkrLZMWR1qhuxGFX.I5uePZ7hxVQdno7OQjRAt3nX2pd5qs06PO' WHERE  id=1;

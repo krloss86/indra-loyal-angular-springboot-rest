@@ -40,4 +40,10 @@ public class ClienteResource {
 		) {
 		return this.clienteService.buscarPorID(id);
 	}
+	
+	//CREAR POST
+	
+	//CREAR PUT
+	
+	//CREAR DELETE
 }

@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import ar.com.loyalindra.models.Cliente;
 import ar.com.loyalindra.models.dto.ClienteDTO;
+import ar.com.loyalindra.models.dto.Recomendacione;
+import ar.com.loyalindra.models.dto.Recomendaciones;
 import ar.com.loyalindra.repository.ClienteRepository;
 
 @Service
@@ -22,7 +24,17 @@ public class ClienteService {
 		ClienteDTO clienteDto = null;
 		if(clienteOptional.isPresent()) {
 			Cliente cliente = clienteOptional.get();
-			System.out.println(cliente);
+			/*
+			cliente.getClienteEquipos().stream()
+				.map(x -> new DatosEquipo("a", x.getEstadoLinea()))
+				.collect(Collectors.toSet());
+			*/
+			
+			List<Recomendacione> recomendacionesList = cliente.getClientePromocion().stream()
+				.map(x -> new Recomendacione(x.getNombre(),x.getCodigo(),x.getDescripcion()))
+				.collect(Collectors.toList());
+			Recomendaciones recomendaciones = new Recomendaciones(recomendacionesList);
+			
 			clienteDto = new ClienteDTO(cliente.getId(),cliente.getNumeroTelefono(),cliente.getNombre());
 		}
 		return clienteDto;
