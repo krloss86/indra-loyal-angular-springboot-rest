@@ -7,7 +7,11 @@ public class Saldos {
 
     private List<DatosSaldo> datosSaldos;
 
-    public List<DatosSaldo> getDatosSaldos() {
+    public Saldos(List<DatosSaldo> datosSaldos) {
+		this.datosSaldos = datosSaldos;
+	}
+
+	public List<DatosSaldo> getDatosSaldos() {
         return datosSaldos;
     }
 

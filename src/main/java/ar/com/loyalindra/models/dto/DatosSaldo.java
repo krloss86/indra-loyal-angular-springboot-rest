@@ -6,8 +6,14 @@ public class DatosSaldo {
     private String titulo;
     private String fecha;
     private String descripcion;
+    
+    public DatosSaldo(String titulo, String fecha, String descripcion) {
+		this.titulo = titulo;
+		this.fecha = fecha;
+		this.descripcion = descripcion;
+	}
 
-    public String getTitulo() {
+	public String getTitulo() {
         return titulo;
     }
 

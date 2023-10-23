@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Recomendaciones {
 
-    private List<Recomendacione> recomendaciones;
+    private List<Recomendacion> recomendacions;
 
-    public Recomendaciones(List<Recomendacione> recomendaciones) {
+    public Recomendaciones(List<Recomendacion> recomendacions) {
 		super();
-		this.recomendaciones = recomendaciones;
+		this.recomendacions = recomendacions;
 	}
 
-	public List<Recomendacione> getRecomendaciones() {
-        return recomendaciones;
+	public List<Recomendacion> getRecomendaciones() {
+        return recomendacions;
     }
 
-    public void setRecomendaciones(List<Recomendacione> recomendaciones) {
-        this.recomendaciones = recomendaciones;
+    public void setRecomendaciones(List<Recomendacion> recomendacions) {
+        this.recomendacions = recomendacions;
     }
 
 }

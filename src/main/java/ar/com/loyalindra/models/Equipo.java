@@ -18,8 +18,8 @@ public class Equipo {
 	@Column(name = "fabricante", nullable = false, length = 50)
 	private String fabricante;
 
-	@Column(name = "estado_uso", nullable = false, length = 50)
-	private String estadoUso;
+	@Column(name = "estado_uso", nullable = false)
+	private Boolean estadoUso;
 
 	@Column(name = "misdn", nullable = false)
 	private String misdn;
@@ -51,11 +51,11 @@ public class Equipo {
 		this.fabricante = fabricante;
 	}
 
-	public String getEstadoUso() {
+	public Boolean getEstadoUso() {
 		return estadoUso;
 	}
-
-	public void setEstadoUso(String estadoUso) {
+	
+	public void setEstadoUso(Boolean estadoUso) {
 		this.estadoUso = estadoUso;
 	}
 

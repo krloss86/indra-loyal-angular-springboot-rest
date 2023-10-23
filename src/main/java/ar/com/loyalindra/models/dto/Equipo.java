@@ -7,7 +7,11 @@ public class Equipo {
 
     private List<DatosEquipo> datosEquipo;
 
-    public List<DatosEquipo> getDatosEquipo() {
+    public Equipo(List<DatosEquipo> datosEquipo) {
+		this.datosEquipo = datosEquipo;
+	}
+
+	public List<DatosEquipo> getDatosEquipo() {
         return datosEquipo;
     }
 

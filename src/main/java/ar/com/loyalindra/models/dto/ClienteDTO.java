@@ -8,7 +8,19 @@ public class ClienteDTO {
     private Cliente cliente;
     private Recomendaciones recomendaciones;
 
-    public Saldos getSaldos() {
+    public ClienteDTO(Saldos saldos, Equipo equipo, Cliente cliente, Recomendaciones recomendaciones) {
+		super();
+		this.saldos = saldos;
+		this.equipo = equipo;
+		this.cliente = cliente;
+		this.recomendaciones = recomendaciones;
+	}
+    
+    public ClienteDTO() {
+		
+	}
+
+	public Saldos getSaldos() {
         return saldos;
     }
 

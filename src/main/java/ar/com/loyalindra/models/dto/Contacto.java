@@ -6,8 +6,14 @@ public class Contacto {
     private String fecha;
     private String empresa;
     private String descripcion;
+    
+    public Contacto(String fecha, String empresa, String descripcion) {
+		this.fecha = fecha;
+		this.empresa = empresa;
+		this.descripcion = descripcion;
+	}
 
-    public String getFecha() {
+	public String getFecha() {
         return fecha;
     }
 

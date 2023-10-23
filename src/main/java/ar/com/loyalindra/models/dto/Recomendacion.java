@@ -1,13 +1,13 @@
 
 package ar.com.loyalindra.models.dto;
 
-public class Recomendacione {
+public class Recomendacion {
 
     private String titulo;
     private String subTitulo;
     private String descripcion;
     
-    public Recomendacione(String titulo, String subTitulo, String descripcion) {
+    public Recomendacion(String titulo, String subTitulo, String descripcion) {
 		super();
 		this.titulo = titulo;
 		this.subTitulo = subTitulo;

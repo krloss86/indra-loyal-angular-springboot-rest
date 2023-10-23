@@ -7,7 +7,11 @@ public class Cliente {
 
     private List<Contacto> contactos;
 
-    public List<Contacto> getContactos() {
+    public Cliente(List<Contacto> contactos) {
+		this.contactos = contactos;
+	}
+
+	public List<Contacto> getContactos() {
         return contactos;
     }
 
