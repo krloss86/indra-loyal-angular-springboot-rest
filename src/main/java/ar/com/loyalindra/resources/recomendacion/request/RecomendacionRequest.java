@@ -19,6 +19,11 @@ public class RecomendacionRequest {
 
 	private LocalDate fechaFin;
 
+	//necesario por Spring
+	public RecomendacionRequest() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public RecomendacionRequest(String codigo, String descripcion, String nombre, LocalDate fechaInicio) {
 		init(codigo, descripcion, nombre, fechaInicio);
 	}

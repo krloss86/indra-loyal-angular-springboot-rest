@@ -43,4 +43,20 @@ public class RecomendacionService {
 		
 		return this.repository.save(nuevapromo);
 	}
+
+	public Promocion buscarPorCodigo(String codigo) {
+		return this.repository.findByCodigo(codigo);
+	}
+
+	public Promocion buscarPorId(Long id) {
+		return this.repository.findById(id).orElseThrow();
+	}
+
+	public void actualizar(Promocion recomendacion) {
+		this.repository.save(recomendacion);		
+	}
+
+	public void eliminar(Long id) {
+		this.repository.deleteById(id);
+	}
 }
